@@ -1,0 +1,24 @@
+{
+  "source": "YouTube",
+  "channel": "@kulturecast",
+  "items": [
+    {
+      "id": "GE6H7DMoaIY",
+      "title": "THE UNTOLD PODCAST EPISODE 2",
+      "url": "https://www.youtube.com/watch?v=GE6H7DMoaIY",
+      "image": "https://i.ytimg.com/vi/GE6H7DMoaIY/hqdefault.jpg",
+      "published": "",
+      "description": "",
+      "platform": "YouTube"
+    },
+    {
+      "id": "xw13rSLrHWo",
+      "title": "UNDER THE SPOTLIGHT E.6",
+      "url": "https://www.youtube.com/watch?v=xw13rSLrHWo",
+      "image": "https://i.ytimg.com/vi/xw13rSLrHWo/hqdefault.jpg",
+      "published": "",
+      "description": "",
+      "platform": "YouTube"
+    }
+  ]
+}
