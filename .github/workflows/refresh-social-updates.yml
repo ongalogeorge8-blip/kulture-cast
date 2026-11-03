@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "17 * * * *"
   workflow_dispatch:
+    inputs:
+      force_rebuild:
+        description: Rebuild Pages even if the feed is unchanged
+        required: false
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths:
@@ -12,6 +18,11 @@ on:
 
 permissions:
   contents: write
+  pages: write
+
+concurrency:
+  group: refresh-social-updates
+  cancel-in-progress: false
 
 jobs:
   refresh-youtube:
@@ -24,13 +35,21 @@ jobs:
       - name: Refresh YouTube feed
         run: python scripts/refresh_social_updates.py
       - name: Commit updated feed
+        id: commit
         run: |
           if git diff --quiet -- data/social-updates.json; then
-            echo "No feed changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/social-updates.json
           git commit -m "Refresh YouTube social updates"
+          git pull --rebase origin main
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Rebuild Pages for updated feed
+        if: steps.commit.outputs.changed == true || inputs.force_rebuild == true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
