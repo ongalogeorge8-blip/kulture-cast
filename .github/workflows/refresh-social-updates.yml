@@ -49,7 +49,7 @@ jobs:
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
       - name: Rebuild Pages for updated feed
-        if: steps.commit.outputs.changed == true || inputs.force_rebuild == true
+        if: fromJSON(steps.commit.outputs.changed) || inputs.force_rebuild
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
