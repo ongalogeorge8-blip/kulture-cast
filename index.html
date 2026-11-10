@@ -102,68 +102,20 @@ h1,h2,h3{text-wrap:balance;overflow-wrap:normal;word-break:normal}p{text-wrap:pr
 </style>
 <section aria-label="Optional visitor analytics" hidden="" id="kc-consent">
 <strong>Help us improve Kulture Cast</strong>
-<p>May we use Google Analytics cookies to understand visits, pages viewed and devices? Google processes this data, potentially outside your country. It's optional: the website works the same if you reject. Analytics choices do not enable advertising. <a href="privacy.html">Privacy &amp; cookie policy</a>.</p>
+<p>May we use Google Analytics cookies to understand visits, pages viewed, devices, contact-link clicks and video starts? Google processes this data, potentially outside your country. It's optional: the website works the same if you reject. Analytics choices do not enable advertising. <a href="privacy.html">Privacy &amp; cookie policy</a>.</p>
 <div class="kc-consent-actions"><button class="kc-consent-button" id="kc-accept" type="button">Accept analytics</button><button class="kc-consent-button" id="kc-reject" type="button">Reject analytics</button><button class="kc-consent-button" data-kc-privacy="" type="button">Privacy details</button></div>
 </section>
 <dialog aria-labelledby="kc-privacy-title" id="kc-privacy">
 <h2 id="kc-privacy-title">Privacy, cookies and your choices</h2>
-<p><strong>Optional Analytics.</strong> Google Analytics runs only after you choose Accept analytics. It helps us measure visits, pages viewed, approximate location, device type and referring websites. Google may process this information outside your country.</p>
-<p>Analytics uses first-party cookies such as <code>_ga</code>, configured for a maximum lifetime of 13 months. Google signals and Analytics advertising personalization are disabled. Our tracking setup excludes query strings and fragments from the page address and sends only the referring site's origin. We do not intentionally send names, email addresses or message contents to Analytics.</p>
-<p>Your Analytics choice is saved in this browser's local storage. Rejecting does not prevent access. Use Analytics preferences in the footer to change your choice. Rejecting later stops future Analytics tracking and removes accessible Analytics cookies; it does not erase data already sent to Google.</p>
+<p><strong>Optional Analytics.</strong> Google Analytics runs only after you choose Accept analytics. It helps us measure visits, pages viewed, approximate location, device type, referring websites, approved sharing-source labels, contact-link clicks, social-link clicks, video-player loads and actual video starts. A contact click is not a confirmed booking. Google may process this information outside your country.</p>
+<p>Analytics uses first-party cookies such as <code>_ga</code>, configured for a maximum lifetime of 13 months. Google signals and Analytics advertising personalization are disabled. Our tracking setup excludes query strings and fragments from the page address and sends only the referring site's origin. Custom action events use fixed method, placement, platform and video labels, not contact addresses, phone numbers, message contents or link destinations. Only approved, non-personal campaign labels are accepted. We do not intentionally send names, email addresses or message contents to Analytics.</p>
+<p>Your Analytics choice is saved in this browser's local storage. Rejecting does not prevent access. Use Analytics preferences in the footer to change your choice. Changes apply across open tabs of this site. Rejecting later stops future Analytics tracking and removes accessible Analytics cookies; it does not erase data already sent to Google.</p>
 <p><strong>No website ad service is currently enabled.</strong> If Google AdSense is introduced, Google and any participating ad vendors may use cookies or similar technologies to serve, measure and, with the necessary consent, personalize ads based on visits to this and other websites. Non-personalized ads may still use cookies. This Analytics notice is not advertising consent.</p>
 <p>YouTube players on the homepage and episode stories load only when you request them. Loading a player connects to YouTube independently of your Analytics choice. External platforms and our website host process information under their own policies.</p>
 <p><a href="privacy.html">Read the full privacy and cookie policy</a> for hosting, contact messages, possible advertising, regional consent requirements, opt-out links and privacy requests.</p>
 <button class="kc-consent-button" id="kc-privacy-close" type="button">Close privacy details</button>
 </dialog>
-<script>
-(()=>{
-'use strict';
-const ID='G-3C1TYCSFW4', KEY='kc_analytics_consent_v1', disable='ga-disable-'+ID;
-const notice=document.getElementById('kc-consent'), details=document.getElementById('kc-privacy');
-let loaded=false, saved=null;
-window[disable]=true;
-function read(){try{return localStorage.getItem(KEY)}catch(e){return null}}
-function save(value){try{localStorage.setItem(KEY,value)}catch(e){}}
-function enable(){
- window[disable]=false;
- if(loaded)return;
- loaded=true;
- window.dataLayer=window.dataLayer||[];
- window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};
- window.gtag('js',new Date());
- window.gtag('config',ID,{allow_google_signals:false,allow_ad_personalization_signals:false,cookie_expires:33696000,cookie_path:'/kulture-cast/',page_location:location.origin+location.pathname,page_referrer:document.referrer?new URL(document.referrer).origin:''});
- const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+ID;document.head.appendChild(script);
-}
-function removeCookies(){
- const names=document.cookie.split(';').map(s=>s.trim().split('=')[0]).filter(n=>/^_ga(?:_|$)/.test(n));
- const domains=['',location.hostname,'.'+location.hostname];
- names.forEach(n=>['/','/kulture-cast','/kulture-cast/'].forEach(path=>domains.forEach(domain=>{document.cookie=n+'=; Max-Age=0; path='+path+(domain?'; domain='+domain:'')+'; SameSite=Lax; Secure'})));
-}
-function choose(value){save(value);saved=value;notice.hidden=true;if(value==='granted')enable();else{window[disable]=true;removeCookies()}}
-function preferences(){notice.hidden=false;document.getElementById('kc-accept').focus()}
-const controls=document.createElement('div');controls.className='kc-privacy-footer';controls.innerHTML='<button type="button" class="kc-consent-button" id="kc-preferences">Analytics preferences</button><button type="button" class="kc-consent-button" data-kc-privacy>Privacy details</button>';
-(document.querySelector('footer')||document.body).appendChild(controls);
-function privacy(){if(typeof details.showModal==='function'){details.showModal()}else{details.setAttribute('open','')}document.getElementById('kc-privacy-close').focus()}
-document.querySelectorAll('[data-kc-privacy]').forEach(b=>b.addEventListener('click',privacy));
-document.getElementById('kc-privacy-close').addEventListener('click',()=>{if(typeof details.close==='function')details.close();else details.removeAttribute('open')});
-document.getElementById('kc-accept').addEventListener('click',()=>choose('granted'));
-document.getElementById('kc-reject').addEventListener('click',()=>choose('denied'));
-document.getElementById('kc-preferences').addEventListener('click',preferences);
-saved=read();if(saved==='granted')enable();else if(saved!=='denied')notice.hidden=false;
-})();
-</script>
+<script src="tracking.js"></script>
 
-<script id="kc-navigation">(function(){document.querySelectorAll('.kc-mobile-menu').forEach(function(m){m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.open=false;});});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus();}});document.addEventListener('click',function(e){if(m.open&&!m.contains(e.target))m.open=false;});});})();</script><script id="kc-video-loading">(function(){
-'use strict';
-const slot=document.getElementById('kc-video-slot'),surface=document.getElementById('kc-video-surface'),toggle=document.getElementById('kc-pip-toggle'),close=document.getElementById('kc-pip-close');
-let frame=null,player=null,playing=false,inView=true,manual=false,dismissed=false;
-function floatVideo(on){surface.classList.toggle('is-floating',on);toggle.setAttribute('aria-pressed',String(on));toggle.textContent=on?'Return to page':'Picture-in-picture';close.hidden=!on;}
-function reconcile(){if(!manual)floatVideo(playing&&!inView&&!dismissed);}
-toggle.addEventListener('click',function(){if(!frame)return;const on=!surface.classList.contains('is-floating');manual=on;dismissed=!on;floatVideo(on);if(!on)slot.scrollIntoView({block:'center',behavior:'auto'});});
-close.addEventListener('click',function(){manual=false;dismissed=true;playing=false;if(player&&typeof player.pauseVideo==='function')player.pauseVideo();else if(frame&&frame.contentWindow)frame.contentWindow.postMessage(JSON.stringify({event:'command',func:'pauseVideo',args:[]}),'https://www.youtube-nocookie.com');floatVideo(false);toggle.focus({preventScroll:true});});
-if('IntersectionObserver' in window)new IntersectionObserver(function(entries){inView=entries[0].isIntersecting;if(inView)dismissed=false;reconcile();},{threshold:0}).observe(slot);
-function ready(){if(player||!frame||!window.YT||typeof YT.Player!=='function')return;player=new YT.Player('kc-latest-player',{events:{onStateChange:function(event){playing=event.data===YT.PlayerState.PLAYING;if(playing)dismissed=false;reconcile();}}});}
-function connectLatest(){frame=document.getElementById('kc-latest-player');toggle.disabled=false;frame.addEventListener('load',ready);const previous=window.onYouTubeIframeAPIReady;window.onYouTubeIframeAPIReady=function(){if(typeof previous==='function')previous();ready();};if(window.YT&&typeof YT.Player==='function')ready();else if(!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')){const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';s.async=true;document.head.appendChild(s);}}
-document.querySelectorAll('.kc-load-video').forEach(function(button){button.addEventListener('click',function(){const f=document.createElement('iframe');f.src=button.dataset.src;f.title=button.dataset.title;f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';f.setAttribute('width','1120');f.setAttribute('height','630');if(button.dataset.playerId)f.id=button.dataset.playerId;button.closest('.episode-player').replaceChildren(f);if(f.id==='kc-latest-player')connectLatest();f.focus();});});
-})();</script></body>
+<script id="kc-navigation">(function(){document.querySelectorAll('.kc-mobile-menu').forEach(function(m){m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.open=false;});});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.open){m.open=false;m.querySelector('summary').focus();}});document.addEventListener('click',function(e){if(m.open&&!m.contains(e.target))m.open=false;});});})();</script><script id="kc-video-loading" src="video-player.js"></script></body>
 </html>
