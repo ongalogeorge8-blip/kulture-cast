@@ -1,4 +1,4 @@
-/* Deferred YouTube players, real playback signals and existing floating-player controls. */
+/* Tap-to-play YouTube players, real playback signals and existing floating-player controls. */
 (function () {
   'use strict';
   const slot = document.getElementById('kc-video-slot');
@@ -36,7 +36,10 @@
     if (!window.YT || typeof window.YT.Player !== 'function') return;
     pending.forEach(function (item, id) {
       if (players.has(id)) return;
-      const instance = new window.YT.Player(id, { events: { onStateChange: function (event) {
+      const instance = new window.YT.Player(id, { events: { onReady: function (event) {
+        // Playback was requested by the visitor's explicit click, never on page load.
+        if (event.target && typeof event.target.playVideo === 'function') event.target.playVideo();
+      }, onStateChange: function (event) {
         const isPlaying = event.data === window.YT.PlayerState.PLAYING;
         if (isPlaying && window.kcAnalytics) window.kcAnalytics.videoStart(item.videoId);
         if (id === 'kc-latest-player') {
@@ -68,14 +71,20 @@
     }
   }
   document.querySelectorAll('.kc-load-video, #load-video').forEach(function (button) {
+    // Make the action clear: this click now requests playback as well as loading.
+    button.textContent = button.id === 'load-video' ? 'Play episode' : button.textContent.replace(/^Load /, 'Play ').replace(/ player$/, '');
     button.addEventListener('click', function () {
       if (button.disabled) return;
       button.disabled = true;
       const u = new URL(button.dataset.src);
       const videoId = u.pathname.split('/').pop();
       u.searchParams.set('enablejsapi', '1');
+      u.searchParams.set('autoplay', '1');
+      u.searchParams.set('playsinline', '1');
       u.searchParams.set('origin', location.origin);
       const f = document.createElement('iframe');
+      // This iframe exists only after a click, so do not defer its navigation.
+      f.loading = 'eager';
       f.src = u.href; f.title = button.dataset.title;
       f.id = button.dataset.playerId || 'kc-episode-player-' + videoId;
       f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
