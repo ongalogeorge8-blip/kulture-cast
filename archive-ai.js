@@ -79,7 +79,7 @@
       await loadTurnstile();
       if (generation!==widgetGeneration || panel.hidden) return;
       verifyStatus.textContent='Complete the security check if prompted.';
-      verifyTimer=setTimeout(function(){ if(generation!==widgetGeneration || panel.hidden || token) return; widgetGeneration++; verifyStatus.textContent='Security check took too long. Please retry verification or use keyword search.'; verifyRetry.hidden=false; updateControls(); },30000);
+      verifyTimer=setTimeout(function(){ if(generation!==widgetGeneration || panel.hidden || token) return; verifyStatus.textContent='Security check is taking longer than expected. Complete it, retry verification, or use keyword search.'; verifyRetry.hidden=false; updateControls(); },30000);
       widgetId=window.turnstile.render(widget,{
         sitekey:sitekey, action:'kc_archive_question', size:'compact', theme:'auto',
         retry:'never', 'refresh-expired':'never', 'refresh-timeout':'never',
