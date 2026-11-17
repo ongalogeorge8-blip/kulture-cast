@@ -1,0 +1,23 @@
+/* Independent archive search; no changes to the player or analytics. */
+.kca-launch{min-height:44px;padding:11px 14px;border:1px solid #402312;background:#fffaf2;color:#261a10;font:700 13px/1.3 Arial,sans-serif;cursor:pointer}
+.kca-launch:hover{background:#ece4d6}
+#kca-panel[hidden]{display:none!important}
+#kca-panel{margin-top:20px;padding:20px;max-width:620px;border:1px solid #a77c46;background:#fffaf2;color:#171511;box-shadow:0 5px 18px #1715111a;font:16px/1.5 Arial,sans-serif;overflow-wrap:anywhere}
+#kca-panel *{box-sizing:border-box}
+#kca-panel .kca-heading{display:flex;align-items:start;justify-content:space-between;gap:12px}
+#kca-panel h2{font:700 22px/1.2 Arial,sans-serif;letter-spacing:0;text-transform:none;margin:0}
+#kca-panel p{font:inherit;color:inherit;margin:10px 0}
+#kca-panel .kca-note{font-size:14px;line-height:1.45}
+#kca-panel label{display:block;font-weight:700;margin:15px 0 6px}
+#kca-panel .kca-form-row{display:flex;gap:8px;flex-wrap:wrap}
+#kca-query{flex:1 1 200px;min-width:0;min-height:44px;padding:9px 10px;border:1px solid #51483d;background:#fff;color:#171511;font:16px Arial,sans-serif}
+#kca-panel button{min-height:44px;padding:9px 13px;border:1px solid #402312;background:#402312;color:#fff;font:700 14px Arial,sans-serif;cursor:pointer}
+#kca-panel button:hover{background:#20120c}
+#kca-panel .kca-close{min-width:44px}
+#kca-panel .kca-status{font-size:14px;font-weight:700;margin-top:14px}
+#kca-panel ol{padding-left:22px;margin:10px 0 0}
+#kca-panel li{padding:8px 0;border-top:1px solid #ded1bf}
+#kca-panel li p{font-size:14px;line-height:1.5;margin:4px 0 0}
+#kca-panel a{color:#703315;text-decoration:underline;text-underline-offset:2px;font-weight:700}
+.kca-launch:focus-visible,#kca-panel :focus-visible{outline:3px solid #a43d09;outline-offset:3px}
+@media(max-width:360px){#kca-panel{padding:14px}.kca-launch{font-size:12px}}
