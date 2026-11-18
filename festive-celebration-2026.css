@@ -1,0 +1,20 @@
+/* Local, purely decorative Christmas ornaments. No scripts or external requests. */
+.kc-holiday-ornaments {
+  height: 112px;
+  width: min(460px, calc(100% - 32px));
+  margin: -18px auto 12px;
+  background: url('festive-ornaments-2026.svg') center top / contain no-repeat;
+  pointer-events: none;
+  user-select: none;
+}
+.kc-christmas-greeting {
+  background: linear-gradient(100deg, #113a39, #1b5548 50%, #113a39);
+  border-bottom: 0;
+}
+@media (max-width: 620px) {
+  .kc-holiday-ornaments { height: 94px; width: min(340px, calc(100% - 24px)); margin: -16px auto 8px; }
+}
+/* Decorations are static; also stop the earlier glow for data-saving users. */
+@media (prefers-reduced-data: reduce), (prefers-reduced-motion: reduce) {
+  .hero::after { animation: none !important; }
+}
