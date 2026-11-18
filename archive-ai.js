@@ -121,7 +121,7 @@
       const raw=await response.text(); if (raw.length>20000) throw Error('response');
       const excerpts=unpack(JSON.parse(raw));
       if (requestId!==serial) return;
-      if (!excerpts.length) status.textContent='No confident match in the reviewed written excerpts. Try one of the example questions or use the keyword search.';
+      if (!excerpts.length) status.textContent='No confident match in the reviewed articles. Try another question or use keyword search.';
       else { excerpts.forEach(addExcerpt); status.textContent='AI-selected written excerpts. Check the linked articles for context; selection can be wrong.'; }
     } catch (e) {
       if (requestId!==serial) return;
