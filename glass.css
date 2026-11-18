@@ -137,3 +137,17 @@ header:not(.site-header),.site-header{background:#eaf3fa;border-bottom:1px solid
 /* Keep the familiar warm brand accents legible against the new cool surfaces. */
 .hero h1 em,.hero .eyebrow,.kc-stories .eyebrow,.services .eyebrow,.episodes .eyebrow,.about .eyebrow,.team .eyebrow,.values .eyebrow,.social-highlights .eyebrow,.contact .eyebrow,.service b,.value b,.person .role{color:#8b3b0c}
 .hero-meta span,.kc-stories .section-head p,.services .section-head p,.episodes .section-head p,.about .section-head p,.team .section-head p,.values .section-head p,.social-highlights .section-head p,.service p,.value p,.person p{color:#51483f}
+/* Stronger blue glass: retain silver reflections and readable light surfaces. */
+.hero{background:radial-gradient(circle at 96% 12%,#72b9ee88 0 3px,transparent 4px),radial-gradient(circle at 91% 22%,#b7c9dc99 0 4px,transparent 5px),radial-gradient(circle at 85% 9%,#2384c777 0 3px,transparent 4px),radial-gradient(ellipse at 80% 22%,#69b6e8 0,transparent 45%),radial-gradient(ellipse at 10% 80%,#b4daf4 0,transparent 45%),linear-gradient(120deg,#e6f3fd,#b9dffa 70%,#8bc2e8)}
+.kc-stories,.services,.episodes,.about,.team,.values,.social-highlights{background-color:#c5e3f8;background-image:radial-gradient(ellipse at 8% 12%,rgba(31,133,213,.38),transparent 47%),radial-gradient(ellipse at 94% 76%,rgba(104,155,191,.30),transparent 48%)}
+.contact{background-color:#8fc4e8;background-image:radial-gradient(ellipse at 12% 18%,#bce3fb 0,transparent 50%),radial-gradient(ellipse at 90% 80%,#4c9dd3 0,transparent 45%)}
+.service{border-top-color:#1267a5}.person{border-top-color:#145783}.person:nth-child(2),.person:nth-child(5){border-top-color:#167bb9}.toc{border-top-color:#167bb9}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ header:not(.site-header),.site-header{background-color:rgba(193,226,249,.91);background-image:linear-gradient(112deg,rgba(255,255,255,.65),rgba(255,255,255,.08) 29%,rgba(57,158,226,.48) 51%,rgba(190,207,220,.46) 72%,rgba(255,255,255,.25));border-bottom-color:rgba(31,112,170,.65)}
+ .service,.kc-story,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{background-color:rgba(219,239,253,.91);background-image:linear-gradient(135deg,rgba(255,255,255,.55),rgba(255,255,255,.03) 42%,rgba(232,244,252,.3)),radial-gradient(ellipse at 95% 5%,rgba(49,151,222,.42),transparent 50%),radial-gradient(ellipse at 2% 98%,rgba(159,187,211,.34),transparent 45%);border-color:rgba(41,118,177,.56)}
+ .episode-card{background-color:rgba(219,239,253,.94);background-image:linear-gradient(135deg,rgba(255,255,255,.62),rgba(209,232,250,.18) 55%,rgba(73,165,224,.4));border-color:rgba(41,118,177,.56);-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+/* An opaque, filter-free option remains available for reduced transparency. */
+@media (prefers-reduced-transparency:reduce){
+ header:not(.site-header),.site-header,.service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc,.kc-mobile-menu .kc-menu-panel{background:#e2f2fd;-webkit-backdrop-filter:none;backdrop-filter:none}
+}
