@@ -123,8 +123,6 @@
     }
   }
   document.querySelectorAll('.kc-load-video, #load-video').forEach(function (button) {
-    // Make the action clear: this click now requests playback as well as loading.
-    button.textContent = button.id === 'load-video' ? 'Play episode' : button.textContent.replace(/^Load /, 'Play ').replace(/ player$/, '');
     button.addEventListener('click', function () {
       if (button.disabled) return;
       button.disabled = true;
