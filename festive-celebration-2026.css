@@ -77,3 +77,14 @@
   .kc-greeting-group { min-width:0; width:auto; white-space:normal; padding:0 18px; text-align:center; }
   .kc-greeting-group[aria-hidden=true] { display:none; }
 }
+
+/* Original holly, presents and gold stars: quiet accents in their own space. */
+.hero > .wrap::before { content:""; display:block; width:180px; max-width:65%; height:62px; margin:0 auto 18px; background:url("festive-holly-gifts-2026.svg?v=1") center / contain no-repeat; pointer-events:none; user-select:none; }
+.kc-snow-drift { height:66px; }
+.kc-snow-drift::after { content:""; display:block; width:160px; max-width:50%; height:56px; margin:5px auto; background:url("festive-holly-gifts-2026.svg?v=1") center / contain no-repeat; pointer-events:none; }
+.kc-snow-drift span:nth-child(1) { left:3%; }
+.kc-snow-drift span:nth-child(2) { left:14%; }
+.kc-snow-drift span:nth-child(3) { left:22%; }
+.kc-snow-drift span:nth-child(4) { left:84%; }
+.kc-snow-drift span:nth-child(5) { left:94%; }
+@media (max-width:620px) { .hero > .wrap::before { width:150px; height:52px; margin-bottom:14px; } }
