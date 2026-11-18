@@ -46,3 +46,34 @@
 }
 @media (prefers-reduced-data: reduce), (prefers-reduced-motion: reduce) { .hero::after { animation: none !important; } }
 @media (prefers-reduced-motion: reduce) { .kc-holiday-ornaments, .kc-holiday-ornaments::before, .kc-holiday-ornaments::after { animation: none; transform: none; } }
+
+/* Snow is decorative, static, and occupies its own space rather than covering content. */
+.kc-snow-drift { position:relative; height:34px; width:100%; overflow:hidden; pointer-events:none; user-select:none; color:#bdeaff; font-family:system-ui,sans-serif; line-height:1; }
+.kc-snow-drift span { position:absolute; text-shadow:0 1px 2px #12567c; opacity:.88; }
+.kc-snow-drift span:nth-child(1) { left:8%; top:3px; font-size:16px; }
+.kc-snow-drift span:nth-child(2) { left:29%; top:14px; font-size:11px; }
+.kc-snow-drift span:nth-child(3) { left:51%; top:5px; font-size:13px; }
+.kc-snow-drift span:nth-child(4) { left:72%; top:13px; font-size:17px; }
+.kc-snow-drift span:nth-child(5) { left:90%; top:2px; font-size:12px; }
+/* A single accessible message, with a hidden visual duplicate for a seamless loop. */
+.kc-christmas-greeting { padding:11px 0; overflow:hidden; text-align:left; }
+.kc-greeting-window { overflow:hidden; }
+.kc-greeting-track { display:flex; width:max-content; }
+.kc-greeting-group { display:block; flex:none; width:max-content; min-width:100vw; white-space:nowrap; padding-right:5em; }
+.kc-christmas-greeting:focus-visible { outline:3px solid #f4c76e; outline-offset:-3px; }
+@media (prefers-reduced-motion:no-preference) {
+  @keyframes kc-greeting-slide { to { transform:translateX(-50%); } }
+  .kc-greeting-track { animation:kc-greeting-slide 100s linear infinite; }
+  @media (hover:hover) { .kc-christmas-greeting:hover .kc-greeting-track { animation-play-state:paused; } }
+}
+/* Focus/touch shows the whole message; reduced preferences always show it still. */
+.kc-christmas-greeting:focus .kc-greeting-window { overflow:visible; }
+.kc-christmas-greeting:focus .kc-greeting-track { display:block; width:auto; animation:none; transform:none; }
+.kc-christmas-greeting:focus .kc-greeting-group { min-width:0; width:auto; white-space:normal; padding:0 18px; text-align:center; }
+.kc-christmas-greeting:focus .kc-greeting-group[aria-hidden=true] { display:none; }
+@media (prefers-reduced-motion:reduce), (prefers-reduced-data:reduce) {
+  .kc-greeting-window { overflow:visible; }
+  .kc-greeting-track { display:block; width:auto; animation:none !important; transform:none; }
+  .kc-greeting-group { min-width:0; width:auto; white-space:normal; padding:0 18px; text-align:center; }
+  .kc-greeting-group[aria-hidden=true] { display:none; }
+}
