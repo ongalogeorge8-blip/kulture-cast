@@ -1,0 +1,22 @@
+/* Seasonal details use local art and do not intercept interaction. */
+.kc-christmas-moment { display:flex; align-items:center; justify-content:center; gap:clamp(16px,4vw,48px); margin:4px auto 25px; max-width:480px; }
+.kc-tree-scene { position:relative; flex:0 0 150px; height:166px; pointer-events:none; user-select:none; }
+.kc-tree-scene img { display:block; width:150px; height:166px; filter:drop-shadow(0 0 10px rgba(255,217,120,.5)); }
+.kc-twinkle { position:absolute; color:#fff0ab; text-shadow:0 0 8px #ffd86b; font-size:17px; line-height:1; }
+.kc-twinkle:nth-of-type(1){left:0;top:27px}.kc-twinkle:nth-of-type(2){right:2px;top:40px;font-size:12px}.kc-twinkle:nth-of-type(3){left:10px;top:104px;font-size:12px}.kc-twinkle:nth-of-type(4){right:7px;top:112px}
+.kc-countdown { color:#102f49; text-align:left; max-width:230px; }
+.kc-countdown strong { display:block; font-size:clamp(17px,2.4vw,22px); line-height:1.3; }
+.kc-countdown small { display:block; margin-top:5px; font-size:12px; line-height:1.4; color:#183d57; }
+.kc-gift-pile { display:block; width:min(210px,70%); height:auto; margin:0 auto 12px; pointer-events:none; user-select:none; }
+.kc-falling-snow { position:fixed; inset:0; overflow:hidden; pointer-events:none; user-select:none; z-index:100; color:#effaff; }
+.kc-falling-snow span { position:absolute; top:-20px; line-height:1; opacity:.68; text-shadow:0 1px 3px #245b7a; }
+.kc-falling-snow span:nth-child(1){left:4%;font-size:12px;animation-delay:-2s}.kc-falling-snow span:nth-child(2){left:15%;font-size:9px;animation-delay:-8s}.kc-falling-snow span:nth-child(3){left:27%;font-size:13px;animation-delay:-14s}.kc-falling-snow span:nth-child(4){left:38%;font-size:10px;animation-delay:-5s}.kc-falling-snow span:nth-child(5){left:50%;font-size:12px;animation-delay:-19s}.kc-falling-snow span:nth-child(6){left:62%;font-size:9px;animation-delay:-11s}.kc-falling-snow span:nth-child(7){left:73%;font-size:13px;animation-delay:-22s}.kc-falling-snow span:nth-child(8){left:85%;font-size:10px;animation-delay:-16s}.kc-falling-snow span:nth-child(9){left:94%;font-size:12px;animation-delay:-25s}
+@media (prefers-reduced-motion:no-preference) {
+ @keyframes kc-snowfall-2026 { from {transform:translate3d(0,0,0)} to {transform:translate3d(8px,calc(100vh + 30px),0)} }
+ @keyframes kc-twinkle-2026 { from {opacity:.55} to {opacity:1} }
+ .kc-falling-snow span { animation-name:kc-snowfall-2026; animation-duration:28s; animation-timing-function:linear; animation-iteration-count:infinite; }
+ .kc-twinkle { animation:kc-twinkle-2026 4s ease-in-out infinite alternate; }
+ .kc-twinkle:nth-of-type(2),.kc-twinkle:nth-of-type(4) { animation-delay:-2s; }
+}
+@media (prefers-reduced-motion:reduce) { .kc-falling-snow span { animation:none; top:12%; }.kc-falling-snow span:nth-child(3n+2){top:48%}.kc-falling-snow span:nth-child(3n){top:82%}.kc-twinkle{animation:none} }
+@media (max-width:400px) { .kc-christmas-moment { gap:12px; } .kc-tree-scene { flex-basis:118px; height:135px; }.kc-tree-scene img { width:118px; height:135px; }.kc-countdown strong {font-size:17px} }
