@@ -1,20 +1,48 @@
-/* Local, purely decorative Christmas ornaments. No scripts or external requests. */
+/* Local, non-interactive festive decorations. */
 .kc-holiday-ornaments {
+  position: relative;
   height: 112px;
   width: min(460px, calc(100% - 32px));
   margin: -18px auto 12px;
   background: url('festive-ornaments-2026.svg') center top / contain no-repeat;
   pointer-events: none;
   user-select: none;
+  transform-origin: 50% 0;
 }
-.kc-christmas-greeting {
-  background: linear-gradient(100deg, #113a39, #1b5548 50%, #113a39);
-  border-bottom: 0;
+/* Two extra hanging baubles, with their strings and star details. */
+.kc-holiday-ornaments::before,
+.kc-holiday-ornaments::after {
+  content: '✦';
+  position: absolute;
+  top: 0;
+  width: 32px;
+  height: 87px;
+  box-sizing: border-box;
+  padding-top: 60px;
+  color: #fff8dc;
+  text-align: center;
+  font-size: 17px;
+  line-height: 27px;
+  transform-origin: 50% 0;
+  background: radial-gradient(circle at center, #bdf9ed 0%, #25a9a1 45%, #07676b 68%, transparent 71%) center bottom / 30px 30px no-repeat,
+              linear-gradient(#e7f1f4, #e7f1f4) center top / 2px 60px no-repeat;
 }
+.kc-holiday-ornaments::before { left: 7%; }
+.kc-holiday-ornaments::after {
+  right: 7%; height: 73px; padding-top: 46px;
+  background: radial-gradient(circle at center, #fff3b5 0%, #e8b83f 45%, #a76410 68%, transparent 71%) center bottom / 30px 30px no-repeat,
+              linear-gradient(#e7f1f4, #e7f1f4) center top / 2px 46px no-repeat;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .kc-holiday-ornaments { animation: kc-ornaments-sway 4.8s ease-in-out infinite alternate; }
+  .kc-holiday-ornaments::before { animation: kc-extra-sway 3.6s -1.1s ease-in-out infinite alternate; }
+  .kc-holiday-ornaments::after { animation: kc-extra-sway 4.1s -2.3s ease-in-out infinite alternate; }
+  @keyframes kc-ornaments-sway { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+  @keyframes kc-extra-sway { from { transform: rotate(-15deg); } to { transform: rotate(15deg); } }
+}
+.kc-christmas-greeting { background: linear-gradient(100deg, #113a39, #1b5548 50%, #113a39); border-bottom: 0; }
 @media (max-width: 620px) {
   .kc-holiday-ornaments { height: 94px; width: min(340px, calc(100% - 24px)); margin: -16px auto 8px; }
 }
-/* Decorations are static; also stop the earlier glow for data-saving users. */
-@media (prefers-reduced-data: reduce), (prefers-reduced-motion: reduce) {
-  .hero::after { animation: none !important; }
-}
+@media (prefers-reduced-data: reduce), (prefers-reduced-motion: reduce) { .hero::after { animation: none !important; } }
+@media (prefers-reduced-motion: reduce) { .kc-holiday-ornaments, .kc-holiday-ornaments::before, .kc-holiday-ornaments::after { animation: none; transform: none; } }
