@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" aria-hidden="true">
+ <g fill="none" stroke="#f4fbff" stroke-linecap="round" stroke-width="2.4" opacity=".85">
+  <g transform="translate(255 65)"><path d="M0-32V32M-28-16L28 16M-28 16L28-16M-8-25L0-18L8-25M-8 25L0 18L8 25M-26-7L-16-9L-20-18M26 7L16 9L20 18M-26 7L-16 9L-20 18M26-7L16-9L20-18"/></g>
+  <g transform="translate(159 119) scale(.55)"><path d="M0-32V32M-28-16L28 16M-28 16L28-16M-8-25L0-18L8-25M-8 25L0 18L8 25M-26-7L-16-9L-20-18M26 7L16 9L20 18M-26 7L-16 9L-20 18M26-7L16-9L20-18"/></g>
+  <g transform="translate(78 39) scale(.38)"><path d="M0-32V32M-28-16L28 16M-28 16L28-16M-8-25L0-18L8-25M-8 25L0 18L8 25M-26-7L-16-9L-20-18M26 7L16 9L20 18M-26 7L-16 9L-20 18M26-7L16-9L20-18"/></g>
+ </g>
+ <g fill="#ffe5a8"><path d="M185 25l2.5 7.5 7.5 2.5-7.5 2.5L185 45l-2.5-7.5L175 35l7.5-2.5z"/><path d="M90 104l1.6 4.8 4.8 1.6-4.8 1.6L90 117l-1.6-4.8-4.8-1.6 4.8-1.6z"/><circle cx="224" cy="139" r="2.5"/><circle cx="127" cy="68" r="2"/><circle cx="276" cy="129" r="2"/></g>
+</svg>
