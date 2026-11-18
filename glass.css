@@ -1,39 +1,39 @@
-/* Kulture Cast glass treatment: warm brand tones and festive green, without extra assets. */
-:root{--glass-light:rgba(255,250,241,.78);--glass-border:rgba(120,83,42,.24);--glass-shadow:0 12px 32px rgba(64,35,18,.09),inset 0 1px 0 rgba(255,255,255,.8)}
+/* Kulture Cast glass treatment: cool blue and silver, while retaining the site’s brand, without extra assets. */
+:root{--glass-light:rgba(228,242,253,.88);--glass-border:rgba(54,101,143,.32);--glass-shadow:0 12px 32px rgba(30,63,93,.14),inset 0 1px 0 rgba(255,255,255,.8)}
 /* Solid, readable surfaces are the default for browsers without backdrop filters. */
-.hero{background:radial-gradient(circle at 96% 12%,#c9933940 0 3px,transparent 4px),radial-gradient(circle at 91% 22%,#8b292440 0 4px,transparent 5px),radial-gradient(circle at 85% 9%,#1d3c3033 0 3px,transparent 4px),radial-gradient(ellipse at 80% 22%,#d8c29b 0,transparent 40%),radial-gradient(ellipse at 10% 80%,#ecd9b9 0,transparent 42%),linear-gradient(120deg,#faf6ed,#ede4d4 70%,#dce5da)}
-header:not(.site-header),.site-header{background:#f9f5ec;border-bottom:1px solid #cdbba2}
-.hero .logo-card{background:#fffaf0;border:8px solid #fffaf0;border-radius:18px;box-shadow:0 20px 45px #4023122e,10px 10px 0 #1d3c30;overflow:hidden}
+.hero{background:radial-gradient(circle at 96% 12%,#72b9ee66 0 3px,transparent 4px),radial-gradient(circle at 91% 22%,#9baec366 0 4px,transparent 5px),radial-gradient(circle at 85% 9%,#4598c855 0 3px,transparent 4px),radial-gradient(ellipse at 80% 22%,#a8cfe9 0,transparent 40%),radial-gradient(ellipse at 10% 80%,#d6e8f6 0,transparent 42%),linear-gradient(120deg,#f3f8fc,#dfedf7 70%,#c9deed)}
+header:not(.site-header),.site-header{background:#eaf3fa;border-bottom:1px solid #a9c2d5}
+.hero .logo-card{background:#f4f9ff;border:8px solid #f4f9ff;border-radius:18px;box-shadow:0 20px 45px #1c46662e,10px 10px 0 #4c7c9d;overflow:hidden}
 .hero .logo-card img{border-radius:10px}
-.kc-stories,.services,.episodes,.about,.team,.values,.social-highlights{background-image:radial-gradient(ellipse at 10% 12%,rgba(202,153,72,.15),transparent 42%),radial-gradient(ellipse at 95% 80%,rgba(29,60,48,.09),transparent 45%)}
-.service,.kc-story,.episode-card,.person,.value,.social-work:not(.poster){background:#fffaf2;border:1px solid var(--glass-border);border-radius:14px;box-shadow:var(--glass-shadow);overflow:hidden}
-.service{border-top:4px solid #b67419}.kc-story-top{border-radius:13px 13px 0 0}.value-grid{gap:12px;border:0}.value:nth-child(odd){background:#fbf3e7}.person{border-top:4px solid #402312}.person:nth-child(2),.person:nth-child(5){border-top-color:#b9470b}
-.statement-grid{gap:14px;background:transparent}.statement article,.statement article:last-child{border:1px solid #ffffff45;border-radius:14px;box-shadow:0 14px 32px #17151130,inset 0 1px 0 #ffffff35}.statement article{background:#503020}.statement article:last-child{background:#a84314}
-.contact{background-image:radial-gradient(ellipse at 12% 18%,#f1c778 0,transparent 50%),radial-gradient(ellipse at 90% 80%,#9e7c39 0,transparent 45%)}
-.contact-box{background:#252019;border:1px solid #ffffff55;border-radius:16px;box-shadow:0 14px 35px #40231238,inset 0 1px 0 #ffffff35}
+.kc-stories,.services,.episodes,.about,.team,.values,.social-highlights{background-image:radial-gradient(ellipse at 10% 12%,rgba(83,159,211,.24),transparent 42%),radial-gradient(ellipse at 95% 80%,rgba(94,133,164,.16),transparent 45%)}
+.service,.kc-story,.episode-card,.person,.value,.social-work:not(.poster){background:#eff7fc;border:1px solid var(--glass-border);border-radius:14px;box-shadow:var(--glass-shadow);overflow:hidden}
+.service{border-top:4px solid #377ca8}.kc-story-top{border-radius:13px 13px 0 0}.value-grid{gap:12px;border:0}.value:nth-child(odd){background:#e6f1f8}.person{border-top:4px solid #315c7a}.person:nth-child(2),.person:nth-child(5){border-top-color:#3d84a9}
+.statement-grid{gap:14px;background:transparent}.statement article,.statement article:last-child{border:1px solid #ffffff45;border-radius:14px;box-shadow:0 14px 32px #17151130,inset 0 1px 0 #ffffff35}.statement article{background:#183a55}.statement article:last-child{background:#255c7c}
+.contact{background-image:radial-gradient(ellipse at 12% 18%,#b5d8ef 0,transparent 50%),radial-gradient(ellipse at 90% 80%,#6ca5c9 0,transparent 45%)}
+.contact-box{background:#122f46;border:1px solid #ffffff55;border-radius:16px;box-shadow:0 14px 35px #315c7a38,inset 0 1px 0 #ffffff35}
 .social-work.poster{border-radius:14px;overflow:hidden}
-.kc-mobile-menu .kc-menu-panel{background:#fffaf2;border-radius:12px}
+.kc-mobile-menu .kc-menu-panel{background:#eff7fc;border-radius:12px}
 /* Editorial pages share the same visual language, with high-contrast reading surfaces. */
-.site-header+.hero,.site-header~main .hero{border-bottom:1px solid #cdbba2}
-.article-layout article{background:#fffaf2;border:1px solid var(--glass-border);border-radius:16px;padding:clamp(20px,3vw,36px);box-shadow:var(--glass-shadow)}
-.toc{background:#fffaf2;border:1px solid var(--glass-border);border-top:3px solid #b9470b;border-radius:12px;padding:18px;box-shadow:var(--glass-shadow)}
+.site-header+.hero,.site-header~main .hero{border-bottom:1px solid #a9c2d5}
+.article-layout article{background:#eff7fc;border:1px solid var(--glass-border);border-radius:16px;padding:clamp(20px,3vw,36px);box-shadow:var(--glass-shadow)}
+.toc{background:#eff7fc;border:1px solid var(--glass-border);border-top:3px solid #3d84a9;border-radius:12px;padding:18px;box-shadow:var(--glass-shadow)}
 .next{border-radius:0 12px 12px 0}
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
- header:not(.site-header),.site-header{background:rgba(249,245,236,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
- .hero .logo-card{background:rgba(255,250,240,.75);border-color:rgba(255,250,240,.75);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+ header:not(.site-header),.site-header{background:rgba(232,243,251,.91);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+ .hero .logo-card{background:rgba(237,247,255,.84);border-color:rgba(237,247,255,.84);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
  .service,.kc-story,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{background:var(--glass-light);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
  .episode-card{background:var(--glass-light)}
- .statement article{background:rgba(87,49,27,.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
- .statement article:last-child{background:rgba(157,58,15,.90)}
- .contact-box{background:rgba(37,32,25,.90);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
- .kc-mobile-menu .kc-menu-panel{background:rgba(255,250,242,.97)}
+ .statement article{background:rgba(24,58,85,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+ .statement article:last-child{background:rgba(37,92,124,.96)}
+ .contact-box{background:rgba(18,47,70,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+ .kc-mobile-menu .kc-menu-panel{background:rgba(239,247,252,.98)}
 }
 @media (prefers-reduced-transparency:reduce){
- header:not(.site-header),.site-header,.service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc,.kc-mobile-menu .kc-menu-panel{background:#fffaf2;-webkit-backdrop-filter:none;backdrop-filter:none}
- .hero .logo-card{background:#fffaf0;border-color:#fffaf0;-webkit-backdrop-filter:none;backdrop-filter:none}
- .statement article{background:#503020;-webkit-backdrop-filter:none;backdrop-filter:none}.statement article:last-child{background:#a84314}.contact-box{background:#252019;-webkit-backdrop-filter:none;backdrop-filter:none}
+ header:not(.site-header),.site-header,.service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc,.kc-mobile-menu .kc-menu-panel{background:#eff7fc;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .hero .logo-card{background:#f4f9ff;border-color:#f4f9ff;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .statement article{background:#183a55;-webkit-backdrop-filter:none;backdrop-filter:none}.statement article:last-child{background:#255c7c}.contact-box{background:#122f46;-webkit-backdrop-filter:none;backdrop-filter:none}
 }
-@media(max-width:620px){.hero .logo-card{border-width:6px;box-shadow:0 12px 28px #4023122e,7px 7px 0 #1d3c30}.value-grid{gap:10px}.article-layout article{padding:20px}}
+@media(max-width:620px){.hero .logo-card{border-width:6px;box-shadow:0 12px 28px #1c46662e,7px 7px 0 #4c7c9d}.value-grid{gap:10px}.article-layout article{padding:20px}}
 
 /* Gentle, short-lived motion: text remains visible and settles after 4.5 seconds. */
 @media (prefers-reduced-motion: no-preference){
@@ -51,20 +51,20 @@ header:not(.site-header),.site-header{background:#f9f5ec;border-bottom:1px solid
 /* Prevent intrinsic card sizing from widening narrow screens. */
 @media(max-width:620px){.statement-grid{grid-template-columns:minmax(0,1fr)}.statement article{min-width:0;overflow-wrap:anywhere}}
 
-/* Liquid-glass accents: bright edges and softly refracted festive colour, never an overlay on content. */
+/* Liquid-glass accents: bright silver edges and softly refracted blue colour, never an overlay on content. */
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
  header:not(.site-header),.site-header{
-  background-color:rgba(249,245,236,.90);
-  background-image:linear-gradient(112deg,rgba(255,255,255,.53),transparent 28%,rgba(239,192,103,.26) 48%,rgba(88,138,109,.15) 66%,transparent 80%);
+  background-color:rgba(232,243,251,.92);
+  background-image:linear-gradient(112deg,rgba(255,255,255,.53),transparent 28%,rgba(142,203,239,.33) 48%,rgba(171,194,212,.28) 66%,transparent 80%);
   background-size:180% 100%;
-  border-bottom-color:rgba(190,153,93,.48);
-  box-shadow:0 8px 28px rgba(54,40,25,.08),inset 0 1px 0 rgba(255,255,255,.92),inset 0 -1px 0 rgba(255,255,255,.52);
+  border-bottom-color:rgba(103,152,187,.50);
+  box-shadow:0 8px 28px rgba(25,60,90,.12),inset 0 1px 0 rgba(255,255,255,.92),inset 0 -1px 0 rgba(255,255,255,.52);
  }
  .service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{
-  background-color:rgba(255,250,241,.84);
-  background-image:radial-gradient(ellipse at 94% 5%,rgba(238,190,102,.28),transparent 40%),radial-gradient(ellipse at 3% 100%,rgba(108,157,124,.15),transparent 42%),linear-gradient(145deg,rgba(255,255,255,.58),rgba(255,250,242,.12) 54%,rgba(255,255,255,.30));
-  border-color:rgba(181,144,91,.40);
-  box-shadow:0 12px 32px rgba(64,35,18,.10),inset 0 1px 0 rgba(255,255,255,.95),inset 1px 0 0 rgba(255,255,255,.56),inset 0 -1px 0 rgba(200,161,100,.18);
+  background-color:rgba(232,244,255,.88);
+  background-image:radial-gradient(ellipse at 94% 5%,rgba(108,190,241,.30),transparent 40%),radial-gradient(ellipse at 3% 100%,rgba(151,180,205,.23),transparent 42%),linear-gradient(145deg,rgba(255,255,255,.58),rgba(230,244,255,.16) 54%,rgba(255,255,255,.30));
+  border-color:rgba(87,143,182,.45);
+  box-shadow:0 12px 32px rgba(30,63,93,.13),inset 0 1px 0 rgba(255,255,255,.95),inset 1px 0 0 rgba(255,255,255,.56),inset 0 -1px 0 rgba(112,161,196,.24);
  }
  /* Keep video cards inexpensive: the existing non-blurred surface is intentional. */
  .episode-card{-webkit-backdrop-filter:none;backdrop-filter:none}
@@ -76,55 +76,64 @@ header:not(.site-header),.site-header{background:#f9f5ec;border-bottom:1px solid
  }
 }
 @media (prefers-reduced-transparency:reduce){
- header:not(.site-header),.site-header,.service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{background:#fffaf2;-webkit-backdrop-filter:none;backdrop-filter:none}
+ header:not(.site-header),.site-header,.service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{background:#eff7fc;-webkit-backdrop-filter:none;backdrop-filter:none}
  header:not(.site-header),.site-header{animation:none}
 }
 @media (prefers-reduced-data:reduce){header:not(.site-header),.site-header{animation:none}}
 
-/* More visible frosted glass, with warm highlights and evergreen reflections.
+/* More visible frosted glass, with cool blue highlights and silver reflections.
    The video-card surface is deliberately not blurred: filtering its ancestors
    would change the containing block of the floating player. */
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
  .kc-stories,.services,.episodes,.about,.team,.values,.social-highlights{
-  background-image:radial-gradient(ellipse at 8% 12%,rgba(220,163,71,.27),transparent 47%),radial-gradient(ellipse at 94% 76%,rgba(48,112,80,.18),transparent 48%);
+  background-image:radial-gradient(ellipse at 8% 12%,rgba(80,163,220,.32),transparent 47%),radial-gradient(ellipse at 94% 76%,rgba(117,159,190,.24),transparent 48%);
  }
  header:not(.site-header),.site-header{
-  background-color:rgba(249,245,236,.76);
-  background-image:linear-gradient(112deg,rgba(255,255,255,.66),rgba(255,255,255,.08) 29%,rgba(236,183,84,.30) 51%,rgba(92,153,114,.20) 72%,rgba(255,255,255,.22));
+  background-color:rgba(225,239,250,.86);
+  background-image:linear-gradient(112deg,rgba(255,255,255,.66),rgba(255,255,255,.08) 29%,rgba(129,197,239,.38) 51%,rgba(174,196,214,.35) 72%,rgba(255,255,255,.22));
   -webkit-backdrop-filter:blur(18px) saturate(135%);backdrop-filter:blur(18px) saturate(135%);
-  border-bottom-color:rgba(180,139,78,.55);
-  box-shadow:0 10px 30px rgba(54,40,25,.13),inset 0 1px 0 rgba(255,255,255,.95),inset 0 -2px 0 rgba(255,255,255,.48);
+  border-bottom-color:rgba(88,145,184,.55);
+  box-shadow:0 10px 30px rgba(25,60,90,.15),inset 0 1px 0 rgba(255,255,255,.95),inset 0 -2px 0 rgba(255,255,255,.48);
  }
  .service,.kc-story,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{
-  background-color:rgba(255,250,241,.69);
-  background-image:linear-gradient(135deg,rgba(255,255,255,.65),rgba(255,255,255,.08) 42%,rgba(255,255,255,.28)),radial-gradient(ellipse at 95% 5%,rgba(236,178,77,.31),transparent 46%),radial-gradient(ellipse at 2% 98%,rgba(81,150,106,.17),transparent 45%);
+  background-color:rgba(228,242,253,.87);
+  background-image:linear-gradient(135deg,rgba(255,255,255,.65),rgba(255,255,255,.08) 42%,rgba(255,255,255,.28)),radial-gradient(ellipse at 95% 5%,rgba(100,181,234,.34),transparent 46%),radial-gradient(ellipse at 2% 98%,rgba(164,191,214,.30),transparent 45%);
   -webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);
-  border-color:rgba(170,127,67,.45);
-  box-shadow:0 16px 34px rgba(64,35,18,.15),0 3px 9px rgba(64,35,18,.06),inset 0 1px 0 rgba(255,255,255,.98),inset 1px 0 0 rgba(255,255,255,.72),inset 0 -1px 0 rgba(175,130,67,.25);
+  border-color:rgba(78,139,182,.48);
+  box-shadow:0 16px 34px rgba(30,63,93,.16),0 3px 9px rgba(30,63,93,.08),inset 0 1px 0 rgba(255,255,255,.98),inset 1px 0 0 rgba(255,255,255,.72),inset 0 -1px 0 rgba(102,155,193,.28);
  }
  .episode-card{
-  background-color:rgba(255,250,241,.78);
-  background-image:linear-gradient(135deg,rgba(255,255,255,.68),rgba(255,255,255,.12) 55%,rgba(235,187,102,.20));
-  border-color:rgba(170,127,67,.45);
-  box-shadow:0 16px 34px rgba(64,35,18,.15),inset 0 1px 0 rgba(255,255,255,.98),inset 1px 0 0 rgba(255,255,255,.7);
+  background-color:rgba(228,242,253,.88);
+  background-image:linear-gradient(135deg,rgba(255,255,255,.68),rgba(255,255,255,.12) 55%,rgba(128,195,235,.28));
+  border-color:rgba(78,139,182,.48);
+  box-shadow:0 16px 34px rgba(30,63,93,.16),inset 0 1px 0 rgba(255,255,255,.98),inset 1px 0 0 rgba(255,255,255,.7);
   -webkit-backdrop-filter:none;backdrop-filter:none;
  }
- .hero .logo-card{-webkit-backdrop-filter:blur(14px) saturate(130%);backdrop-filter:blur(14px) saturate(130%);background-color:rgba(255,250,240,.69);border-color:rgba(255,250,240,.78);box-shadow:0 20px 45px #40231238,10px 10px 0 #1d3c30,inset 0 1px 0 #fff}
- .statement article{background:rgba(76,43,25,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 16px 34px #17151140,inset 0 1px 0 #ffffff85,inset 1px 0 0 #ffffff45}
- .statement article:last-child{background:rgba(139,48,12,.91)}
- .contact-box{background:rgba(37,32,25,.90);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 18px 40px #40231255,inset 0 1px 0 #ffffff85,inset 1px 0 0 #ffffff40}
+ .hero .logo-card{-webkit-backdrop-filter:blur(14px) saturate(130%);backdrop-filter:blur(14px) saturate(130%);background-color:rgba(234,245,254,.88);border-color:rgba(235,246,255,.90);box-shadow:0 20px 45px #315c7a38,10px 10px 0 #4c7c9d,inset 0 1px 0 #fff}
+ .statement article{background:rgba(24,58,85,.97);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 16px 34px #142b4040,inset 0 1px 0 #ffffff85,inset 1px 0 0 #ffffff45}
+ .statement article:last-child{background:rgba(37,92,124,.97)}
+ .contact-box{background:rgba(18,47,70,.96);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 18px 40px #315c7a55,inset 0 1px 0 #ffffff85,inset 1px 0 0 #ffffff40}
 }
 /* Keep mobile compositing lighter without changing the player or its parents. */
 @media(max-width:620px){
  @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
   header:not(.site-header),.site-header,.hero .logo-card,.service,.kc-story,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc,.statement article,.contact-box{-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-  .hero .logo-card{box-shadow:0 12px 28px #40231238,7px 7px 0 #1d3c30,inset 0 1px 0 #fff}
+  .hero .logo-card{box-shadow:0 12px 28px #315c7a38,7px 7px 0 #4c7c9d,inset 0 1px 0 #fff}
  }
 }
 /* Restore fully opaque surfaces and remove all filters for this preference. */
 @media (prefers-reduced-transparency:reduce){
- header:not(.site-header),.site-header,.service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc,.kc-mobile-menu .kc-menu-panel{background:#fffaf2;-webkit-backdrop-filter:none;backdrop-filter:none}
- .hero .logo-card{background:#fffaf0;border-color:#fffaf0;-webkit-backdrop-filter:none;backdrop-filter:none}
- .statement article{background:#503020;-webkit-backdrop-filter:none;backdrop-filter:none}.statement article:last-child{background:#a84314}.contact-box{background:#252019;-webkit-backdrop-filter:none;backdrop-filter:none}
+ header:not(.site-header),.site-header,.service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc,.kc-mobile-menu .kc-menu-panel{background:#eff7fc;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .hero .logo-card{background:#f4f9ff;border-color:#f4f9ff;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .statement article{background:#183a55;-webkit-backdrop-filter:none;backdrop-filter:none}.statement article:last-child{background:#255c7c}.contact-box{background:#122f46;-webkit-backdrop-filter:none;backdrop-filter:none}
  header:not(.site-header),.site-header{animation:none}
 }
+
+/* Cool blue and silver grounds; no overlays or extra requests. */
+.kc-stories,.services,.episodes,.about,.team,.values,.social-highlights{background-color:#e4f0f8}
+.statement{background-color:#173a55}
+.contact{background-color:#a9cce2}
+
+/* Keep the familiar warm brand accents legible against the new cool surfaces. */
+.hero h1 em,.hero .eyebrow,.kc-stories .eyebrow,.services .eyebrow,.episodes .eyebrow,.about .eyebrow,.team .eyebrow,.values .eyebrow,.social-highlights .eyebrow,.contact .eyebrow,.service b,.value b,.person .role{color:#8b3b0c}
+.hero-meta span,.kc-stories .section-head p,.services .section-head p,.episodes .section-head p,.about .section-head p,.team .section-head p,.values .section-head p,.social-highlights .section-head p,.service p,.value p,.person p{color:#51483f}
