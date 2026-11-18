@@ -159,3 +159,15 @@ header:not(.site-header),.site-header{background:#eaf3fa;border-bottom:1px solid
 @media (prefers-reduced-transparency:reduce){
  header:not(.site-header),.site-header,.service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc,.kc-mobile-menu .kc-menu-panel{background:#e2f2fd;-webkit-backdrop-filter:none;backdrop-filter:none}
 }
+/* Defined blue glass edges, with the existing soft silver reflections left intact.
+   Solid colours work with and without backdrop filters and on opaque surfaces. */
+.service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{
+ border:2px solid #347aa7;
+}
+.service{border-top:4px solid #1267a5}
+.person{border-top:4px solid #145783}
+.person:nth-child(2),.person:nth-child(5){border-top-color:#167bb9}
+.toc{border-top:3px solid #167bb9}
+.statement article,.statement article:last-child,.contact-box{border:2px solid #7fb8d6}
+header:not(.site-header),.site-header{border-bottom:2px solid #347aa7}
+.kc-mobile-menu .kc-menu-panel{border:2px solid #347aa7}
