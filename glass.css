@@ -34,3 +34,19 @@ header:not(.site-header),.site-header{background:#f9f5ec;border-bottom:1px solid
  .statement article{background:#503020;-webkit-backdrop-filter:none;backdrop-filter:none}.statement article:last-child{background:#a84314}.contact-box{background:#252019;-webkit-backdrop-filter:none;backdrop-filter:none}
 }
 @media(max-width:620px){.hero .logo-card{border-width:6px;box-shadow:0 12px 28px #4023122e,7px 7px 0 #1d3c30}.value-grid{gap:10px}.article-layout article{padding:20px}}
+
+/* Gentle, short-lived motion: text remains visible and settles after 4.5 seconds. */
+@media (prefers-reduced-motion: no-preference){
+ @keyframes kcWordSway{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+ @keyframes kcRibbonSway{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
+ @keyframes kcGlassFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+ .hero h1 .title-line:last-child,.site-header ~ main .hero h1 span{display:block;animation:kcWordSway 4.5s ease-in-out 1}
+ .marquee.marquee span{display:inline-block;max-width:100%;animation:kcRibbonSway 4.5s ease-in-out 1}
+ .hero .logo-card{animation:kcGlassFloat 4.5s ease-in-out 1}
+ .service,.kc-story,.person,.value,.social-work:not(.poster),.statement article,.toc{transition:transform .25s ease,box-shadow .25s ease}
+ @media (hover:hover){.service:hover,.kc-story:hover,.person:hover,.value:hover,.social-work:not(.poster):hover,.statement article:hover,.toc:hover{transform:translateY(-3px)}}
+ .kc-story:focus-within,.social-work:not(.poster):focus-within{transform:translateY(-3px)}
+}
+@media (prefers-reduced-data: reduce){.hero h1 .title-line:last-child,.site-header ~ main .hero h1 span,.marquee.marquee span,.hero .logo-card{animation:none!important}.service,.kc-story,.person,.value,.social-work:not(.poster),.statement article,.toc{transition:none!important}}
+/* Prevent intrinsic card sizing from widening narrow screens. */
+@media(max-width:620px){.statement-grid{grid-template-columns:minmax(0,1fr)}.statement article{min-width:0;overflow-wrap:anywhere}}
