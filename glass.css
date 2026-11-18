@@ -159,15 +159,17 @@ header:not(.site-header),.site-header{background:#eaf3fa;border-bottom:1px solid
 @media (prefers-reduced-transparency:reduce){
  header:not(.site-header),.site-header,.service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc,.kc-mobile-menu .kc-menu-panel{background:#e2f2fd;-webkit-backdrop-filter:none;backdrop-filter:none}
 }
-/* Defined blue glass edges, with the existing soft silver reflections left intact.
-   Solid colours work with and without backdrop filters and on opaque surfaces. */
+/* Border-free glass surfaces: keep blue colour, blur and soft depth without
+   decorative outlines or inset edge strokes. Controls keep their own borders
+   and keyboard focus indicators; the mobile menu retains a shadow boundary. */
+header:not(.site-header),.site-header{border-bottom:0;box-shadow:0 10px 30px rgba(25,60,90,.15)}
+.hero,.site-header+.hero,.site-header~main .hero{border-bottom:0}
 .service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{
- border:2px solid #347aa7;
+ border:0;box-shadow:0 16px 34px rgba(30,63,93,.16),0 3px 9px rgba(30,63,93,.08)
 }
-.service{border-top:4px solid #1267a5}
-.person{border-top:4px solid #145783}
-.person:nth-child(2),.person:nth-child(5){border-top-color:#167bb9}
-.toc{border-top:3px solid #167bb9}
-.statement article,.statement article:last-child,.contact-box{border:2px solid #7fb8d6}
-header:not(.site-header),.site-header{border-bottom:2px solid #347aa7}
-.kc-mobile-menu .kc-menu-panel{border:2px solid #347aa7}
+.kc-story-top,.social-work.poster,.update-card,.next{border:0}
+.statement article,.statement article:last-child{border:0;box-shadow:0 16px 34px #142b4040}
+.contact-box{border:0;box-shadow:0 18px 40px #315c7a55}
+.hero .logo-card{border:0;box-shadow:0 20px 45px #315c7a38}
+.kc-mobile-menu .kc-menu-panel{border:0;box-shadow:0 8px 24px #0003}
+@media(max-width:620px){.hero .logo-card{border:0;box-shadow:0 12px 28px #315c7a38}}
