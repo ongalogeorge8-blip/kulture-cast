@@ -80,3 +80,51 @@ header:not(.site-header),.site-header{background:#f9f5ec;border-bottom:1px solid
  header:not(.site-header),.site-header{animation:none}
 }
 @media (prefers-reduced-data:reduce){header:not(.site-header),.site-header{animation:none}}
+
+/* More visible frosted glass, with warm highlights and evergreen reflections.
+   The video-card surface is deliberately not blurred: filtering its ancestors
+   would change the containing block of the floating player. */
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ .kc-stories,.services,.episodes,.about,.team,.values,.social-highlights{
+  background-image:radial-gradient(ellipse at 8% 12%,rgba(220,163,71,.27),transparent 47%),radial-gradient(ellipse at 94% 76%,rgba(48,112,80,.18),transparent 48%);
+ }
+ header:not(.site-header),.site-header{
+  background-color:rgba(249,245,236,.76);
+  background-image:linear-gradient(112deg,rgba(255,255,255,.66),rgba(255,255,255,.08) 29%,rgba(236,183,84,.30) 51%,rgba(92,153,114,.20) 72%,rgba(255,255,255,.22));
+  -webkit-backdrop-filter:blur(18px) saturate(135%);backdrop-filter:blur(18px) saturate(135%);
+  border-bottom-color:rgba(180,139,78,.55);
+  box-shadow:0 10px 30px rgba(54,40,25,.13),inset 0 1px 0 rgba(255,255,255,.95),inset 0 -2px 0 rgba(255,255,255,.48);
+ }
+ .service,.kc-story,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{
+  background-color:rgba(255,250,241,.69);
+  background-image:linear-gradient(135deg,rgba(255,255,255,.65),rgba(255,255,255,.08) 42%,rgba(255,255,255,.28)),radial-gradient(ellipse at 95% 5%,rgba(236,178,77,.31),transparent 46%),radial-gradient(ellipse at 2% 98%,rgba(81,150,106,.17),transparent 45%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);
+  border-color:rgba(170,127,67,.45);
+  box-shadow:0 16px 34px rgba(64,35,18,.15),0 3px 9px rgba(64,35,18,.06),inset 0 1px 0 rgba(255,255,255,.98),inset 1px 0 0 rgba(255,255,255,.72),inset 0 -1px 0 rgba(175,130,67,.25);
+ }
+ .episode-card{
+  background-color:rgba(255,250,241,.78);
+  background-image:linear-gradient(135deg,rgba(255,255,255,.68),rgba(255,255,255,.12) 55%,rgba(235,187,102,.20));
+  border-color:rgba(170,127,67,.45);
+  box-shadow:0 16px 34px rgba(64,35,18,.15),inset 0 1px 0 rgba(255,255,255,.98),inset 1px 0 0 rgba(255,255,255,.7);
+  -webkit-backdrop-filter:none;backdrop-filter:none;
+ }
+ .hero .logo-card{-webkit-backdrop-filter:blur(14px) saturate(130%);backdrop-filter:blur(14px) saturate(130%);background-color:rgba(255,250,240,.69);border-color:rgba(255,250,240,.78);box-shadow:0 20px 45px #40231238,10px 10px 0 #1d3c30,inset 0 1px 0 #fff}
+ .statement article{background:rgba(76,43,25,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 16px 34px #17151140,inset 0 1px 0 #ffffff85,inset 1px 0 0 #ffffff45}
+ .statement article:last-child{background:rgba(139,48,12,.91)}
+ .contact-box{background:rgba(37,32,25,.90);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 18px 40px #40231255,inset 0 1px 0 #ffffff85,inset 1px 0 0 #ffffff40}
+}
+/* Keep mobile compositing lighter without changing the player or its parents. */
+@media(max-width:620px){
+ @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  header:not(.site-header),.site-header,.hero .logo-card,.service,.kc-story,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc,.statement article,.contact-box{-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+  .hero .logo-card{box-shadow:0 12px 28px #40231238,7px 7px 0 #1d3c30,inset 0 1px 0 #fff}
+ }
+}
+/* Restore fully opaque surfaces and remove all filters for this preference. */
+@media (prefers-reduced-transparency:reduce){
+ header:not(.site-header),.site-header,.service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc,.kc-mobile-menu .kc-menu-panel{background:#fffaf2;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .hero .logo-card{background:#fffaf0;border-color:#fffaf0;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .statement article{background:#503020;-webkit-backdrop-filter:none;backdrop-filter:none}.statement article:last-child{background:#a84314}.contact-box{background:#252019;-webkit-backdrop-filter:none;backdrop-filter:none}
+ header:not(.site-header),.site-header{animation:none}
+}
