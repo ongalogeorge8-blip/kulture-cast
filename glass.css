@@ -1,5 +1,5 @@
 /* Kulture Cast glass treatment: warm brand tones and festive green, without extra assets. */
-:root{--glass-light:rgba(255,250,241,.88);--glass-border:rgba(120,83,42,.24);--glass-shadow:0 12px 32px rgba(64,35,18,.09),inset 0 1px 0 rgba(255,255,255,.8)}
+:root{--glass-light:rgba(255,250,241,.78);--glass-border:rgba(120,83,42,.24);--glass-shadow:0 12px 32px rgba(64,35,18,.09),inset 0 1px 0 rgba(255,255,255,.8)}
 /* Solid, readable surfaces are the default for browsers without backdrop filters. */
 .hero{background:radial-gradient(circle at 96% 12%,#c9933940 0 3px,transparent 4px),radial-gradient(circle at 91% 22%,#8b292440 0 4px,transparent 5px),radial-gradient(circle at 85% 9%,#1d3c3033 0 3px,transparent 4px),radial-gradient(ellipse at 80% 22%,#d8c29b 0,transparent 40%),radial-gradient(ellipse at 10% 80%,#ecd9b9 0,transparent 42%),linear-gradient(120deg,#faf6ed,#ede4d4 70%,#dce5da)}
 header:not(.site-header),.site-header{background:#f9f5ec;border-bottom:1px solid #cdbba2}
@@ -21,7 +21,8 @@ header:not(.site-header),.site-header{background:#f9f5ec;border-bottom:1px solid
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
  header:not(.site-header),.site-header{background:rgba(249,245,236,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
  .hero .logo-card{background:rgba(255,250,240,.75);border-color:rgba(255,250,240,.75);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
- .service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{background:var(--glass-light);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+ .service,.kc-story,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{background:var(--glass-light);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+ .episode-card{background:var(--glass-light)}
  .statement article{background:rgba(87,49,27,.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
  .statement article:last-child{background:rgba(157,58,15,.90)}
  .contact-box{background:rgba(37,32,25,.90);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
