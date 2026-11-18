@@ -50,3 +50,33 @@ header:not(.site-header),.site-header{background:#f9f5ec;border-bottom:1px solid
 @media (prefers-reduced-data: reduce){.hero h1 .title-line:last-child,.site-header ~ main .hero h1 span,.marquee.marquee span,.hero .logo-card{animation:none!important}.service,.kc-story,.person,.value,.social-work:not(.poster),.statement article,.toc{transition:none!important}}
 /* Prevent intrinsic card sizing from widening narrow screens. */
 @media(max-width:620px){.statement-grid{grid-template-columns:minmax(0,1fr)}.statement article{min-width:0;overflow-wrap:anywhere}}
+
+/* Liquid-glass accents: bright edges and softly refracted festive colour, never an overlay on content. */
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ header:not(.site-header),.site-header{
+  background-color:rgba(249,245,236,.90);
+  background-image:linear-gradient(112deg,rgba(255,255,255,.53),transparent 28%,rgba(239,192,103,.26) 48%,rgba(88,138,109,.15) 66%,transparent 80%);
+  background-size:180% 100%;
+  border-bottom-color:rgba(190,153,93,.48);
+  box-shadow:0 8px 28px rgba(54,40,25,.08),inset 0 1px 0 rgba(255,255,255,.92),inset 0 -1px 0 rgba(255,255,255,.52);
+ }
+ .service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{
+  background-color:rgba(255,250,241,.84);
+  background-image:radial-gradient(ellipse at 94% 5%,rgba(238,190,102,.28),transparent 40%),radial-gradient(ellipse at 3% 100%,rgba(108,157,124,.15),transparent 42%),linear-gradient(145deg,rgba(255,255,255,.58),rgba(255,250,242,.12) 54%,rgba(255,255,255,.30));
+  border-color:rgba(181,144,91,.40);
+  box-shadow:0 12px 32px rgba(64,35,18,.10),inset 0 1px 0 rgba(255,255,255,.95),inset 1px 0 0 rgba(255,255,255,.56),inset 0 -1px 0 rgba(200,161,100,.18);
+ }
+ /* Keep video cards inexpensive: the existing non-blurred surface is intentional. */
+ .episode-card{-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+@media (prefers-reduced-motion:no-preference){
+ @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  @keyframes kcLiquidGlint{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+  header:not(.site-header),.site-header{animation:kcLiquidGlint 18s ease-in-out infinite}
+ }
+}
+@media (prefers-reduced-transparency:reduce){
+ header:not(.site-header),.site-header,.service,.kc-story,.episode-card,.person,.value,.value:nth-child(odd),.social-work:not(.poster),.article-layout article,.toc{background:#fffaf2;-webkit-backdrop-filter:none;backdrop-filter:none}
+ header:not(.site-header),.site-header{animation:none}
+}
+@media (prefers-reduced-data:reduce){header:not(.site-header),.site-header{animation:none}}
